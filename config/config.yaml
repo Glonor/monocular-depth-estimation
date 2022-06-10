@@ -1,0 +1,28 @@
+run_name: "mobile_v3"
+# path options
+nyu_data_path: "/content/drive/MyDrive/NYUv2/nyu_depth_v2_labeled.mat"
+nyu_split_path: "/content/drive/MyDrive/NYUv2/splits.mat"
+train_filepath: "/content/MDE/Places"
+checkpoint_path: "/content/drive/MyDrive/nn_checkpoints"
+resume_path: "/content/drive/MyDrive/nn_checkpoints/130422/mobile_v3_2022-04-13_15-51-34/checkpoint.pth"
+best_model: "/content/model_0.4494756457743855.pth"
+# training options
+resume: False
+random_seed: 0
+n_epochs: 6
+workers: 0
+batch_size: 128
+pretrained_enc: True
+log_interval: 50
+
+# optimizer options
+criterion: "depth"
+optimizer: "adam"
+opt_params: {lr: 0.001}
+lr_decay_rate: 0.316
+
+height: 192
+width: 256
+
+# test_flag
+test_flag: False
