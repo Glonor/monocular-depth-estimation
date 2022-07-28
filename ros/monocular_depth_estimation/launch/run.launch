@@ -1,0 +1,3 @@
+<launch>
+  <node name="monocular_depth_estimation" pkg="monocular_depth_estimation" type="main.py" output="screen" respawn="true" />
+</launch>

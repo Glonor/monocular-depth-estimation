@@ -1,11 +1,11 @@
 run_name: "mobile_v3"
 # path options
-nyu_data_path: "/content/drive/MyDrive/NYUv2/nyu_depth_v2_labeled.mat"
-nyu_split_path: "/content/drive/MyDrive/NYUv2/splits.mat"
+nyu_data_path: "nyu_depth_v2/nyu_depth_v2_labeled.mat"
+nyu_split_path: "nyu_depth_v2/splits.mat"
 train_filepath: "/content/MDE/Places"
 checkpoint_path: "/content/drive/MyDrive/nn_checkpoints"
 resume_path: "/content/drive/MyDrive/nn_checkpoints/130422/mobile_v3_2022-04-13_15-51-34/checkpoint.pth"
-best_model: "/content/model_0.4494756457743855.pth"
+best_model: "ros\monocular_depth_estimation\src\model_0.4494756457743855.pth"
 # training options
 resume: False
 random_seed: 0
@@ -25,4 +25,4 @@ height: 192
 width: 256
 
 # test_flag
-test_flag: False
+test_flag: True
