@@ -6,6 +6,9 @@ The goal of this project is to develop a deep learning model able to compute dep
 
 This work is based on [FastDepth](https://arxiv.org/abs/1903.03273) and a [distillation strategy](https://arxiv.org/abs/2006.05724) using [MiDaS](https://arxiv.org/abs/2103.13413) as teacher.
 
+
+<img src="./comparisons.png"/>
+
 ## Model
 
 The FastDepth model used is MobileNet-NNConv5(depthwise), with additive skip connections.
@@ -14,7 +17,7 @@ Moreover, feature upsampling through the nearest neighbour operator in the decod
 
 ## Dataset
 The distillation strategy consists in using a large collection of images to generate proxy labels with a robost model like MiDaS.
-The [Places dataset](http://places2.csail.mit.edu/) may be an appropiate image collection because of the multitude of environment categories (indoor and outdoor) and the sheer size of the dataset (more than 10 million images).
+The [Places dataset](http://places2.csail.mit.edu/) may be an appropriate image collection because of the multitude of environment categories (indoor and outdoor) and the sheer size of the dataset (more than 10 million images).
 For training purposes only 450 000 were selected randomly. The images were first resized and then randomly cropped to have a resolution of 512x384.
 Once the depth map have been generated through MiDaS a further resize was done to bring the resolution of both the image and depth map to 256x192, which is the input size of the lightweight model. It has taken 20+ hours to generate the depth maps using NVIDIA Tesla P100 GPU.
 
@@ -27,6 +30,8 @@ Comparison against prior work and the teacher (MiDaS) on NYU Depth test split
 | PydNet    |  640x320   |       WILD       |   0.130   |   0.091   |   0.493   |   0.168   |   0.827    |    0.969    |    0.994    |
 | FastDepth |  640x320   |       WILD       |   0.129   |   0.090   |   0.492   |   0.167   |   0.833    |    0.971    |    0.994    |
 | This Work |  256x192   |      Places      | **0.115** | **0.077** | **0.449** | **0.150** | **0.867**  |  **0.976**  |  **0.995**  |
+
+<img src="./images/output.png"/>
 
 ## Usage
 - Download NYU Depth V2 test split
