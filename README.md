@@ -31,8 +31,6 @@ Comparison against prior work and the teacher (MiDaS) on NYU Depth test split
 | FastDepth |  640x320   |       WILD       |   0.129   |   0.090   |   0.492   |   0.167   |   0.833    |    0.971    |    0.994    |
 | This Work |  256x192   |      Places      | **0.115** | **0.077** | **0.449** | **0.150** | **0.867**  |  **0.976**  |  **0.995**  |
 
-<img src="./images/output.png"/>
-
 ## Usage
 - Download NYU Depth V2 test split
 ```
