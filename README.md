@@ -20,7 +20,7 @@ Once the depth map have been generated through MiDaS a further resize was done t
 
 ## Results
 Comparison against prior work and the teacher (MiDaS) on NYU Depth test split
-| Rete      | Input size | Training Dataset |  Abs Rel  |  Sq Rel   | RMSE	log  |   RMSE    | $(δ<1.25) | $(δ<1.25^2) | $(δ<1.25^3) |
+| Rete      | Input size | Training Dataset |  Abs Rel  |  Sq Rel   | RMSE	log  |   RMSE    | $δ<1.25$ | $δ<1.25^2$ | $δ<1.25^3$ |
 | --------- | :--------: | :--------------: | :-------: | :-------: | :-------: | :-------: | :--------: | :---------: | :---------: |
 | MiDaS     |  512x384   |       MIX        |   0.091   |   0.058   |   0.391   |   0.121   |   0.919    |    0.987    |    0.997    |
 | FastDepth |  224x224   |       NYU        |   0.165   |   0.154   |   0.604   |   0.208   |   0.771    |    0.937    |    0.980    |
@@ -44,40 +44,13 @@ python main.py --config config/config.yaml
 
 ## References
 
-@inproceedings{icra_2019_fastdepth,
-	author      = {{Wofk, Diana and Ma, Fangchang and Yang, Tien-Ju and Karaman, Sertac and Sze, Vivienne}},
-	title       = {{FastDepth: Fast Monocular Depth Estimation on Embedded Systems}},
-	booktitle   = {{IEEE International Conference on Robotics and Automation (ICRA)}},
-	year        = {{2019}}
-}
 
-@ARTICLE {Ranftl2022,
-    author  = "Ren\'{e} Ranftl and Katrin Lasinger and David Hafner and Konrad Schindler and Vladlen Koltun",
-    title   = "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer",
-    journal = "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-    year    = "2022",
-    volume  = "44",
-    number  = "3"
-}
-@article{Ranftl2021,
-	author    = {Ren\'{e} Ranftl and Alexey Bochkovskiy and Vladlen Koltun},
-	title     = {Vision Transformers for Dense Prediction},
-	journal   = {ICCV},
-	year      = {2021},
-}
+- Wofk, D., Ma, F., Yang, T.J., Karaman, S., & Sze, V. (2019). FastDepth: Fast Monocular Depth Estimation on Embedded Systems. In IEEE International Conference on Robotics and Automation (ICRA).
 
-@article{aleotti2020real,
-  title={Real-time single image depth perception in the wild with handheld devices},
-  author={Aleotti, Filippo and Zaccaroni, Giulio and Bartolomei, Luca and Poggi, Matteo and Tosi, Fabio and Mattoccia, Stefano},
-  journal={Sensors},
-  volume={21},
-  year={2021}
-}
+- René Ranftl, Katrin Lasinger, David Hafner, Konrad Schindler, & Vladlen Koltun (2022). Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-Shot Cross-Dataset Transfer. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(3).
 
-@article{zhou2017places,
-  title={Places: A 10 million Image Database for Scene Recognition},
-  author={Zhou, Bolei and Lapedriza, Agata and Khosla, Aditya and Oliva, Aude and Torralba, Antonio},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2017},
-  publisher={IEEE}
-}
+- Rene Ranftl, Alexey Bochkovskiy, & Vladlen Koltun (2021). Vision Transformers for Dense Prediction. ICCV.
+
+- Aleotti, F., Zaccaroni, G., Bartolomei, L., Poggi, M., Tosi, F., & Mattoccia, S. (2021). Real-time single image depth perception in the wild with handheld devices. Sensors, 21.
+
+- Zhou, B., Lapedriza, A., Khosla, A., Oliva, A., & Torralba, A. (2017). Places: A 10 million Image Database for Scene Recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence.
