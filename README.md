@@ -2,7 +2,7 @@
 This repository contains a trained model and the code for my research project in deep learning.
 
 ## Purpose
-The goal of this project is to develop a deep learning model able to compute depth from a single image. The main constraint is a lightweight architecture that enable real-time inference on NVIDIA Jetson TX2 CPU.
+The goal of this project is to develop a deep learning model able to compute depth from a single image. The main constraint is a lightweight architecture that enables real-time inference on NVIDIA Jetson TX2 CPU.
 
 This work is based on [FastDepth](https://arxiv.org/abs/1903.03273) and a [distillation strategy](https://arxiv.org/abs/2006.05724) using [MiDaS](https://arxiv.org/abs/2103.13413) as teacher.
 
